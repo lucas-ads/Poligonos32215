@@ -1,5 +1,6 @@
 package views;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,12 +8,23 @@ import formas.Circulo;
 import formas.Forma;
 import formas.FormaBidimensional;
 import formas.Quadrado;
+import interfaces.ITrianguloRetangulo;
 
 public class Programa {
 
 	public static void main(String[] args) {
+		ITrianguloRetangulo triangulo = null;
+		triangulo.setBase(9);
+		triangulo.setAltura(7);
+		System.out.println("A hipotenusa é: " + triangulo.calculaHipotenusa());
+		System.out.println("A area é: " + triangulo.calculaArea());
+		System.out.println("O perimetro é: " + triangulo.calculaPerimetro());
+		System.out.println("A base é " + triangulo.getBase() + " A altura é: " + triangulo.getAltura());
 		
-		List<FormaBidimensional> poligonos = new ArrayList<FormaBidimensional>();
+		
+		
+		
+		/*List<FormaBidimensional> poligonos = new ArrayList<FormaBidimensional>();
 		
 		Quadrado quad1 = new Quadrado(5);
 		Quadrado quad2 = new Quadrado(7);
@@ -32,7 +44,7 @@ public class Programa {
 		
 		for(FormaBidimensional fb : poligonos){
 			System.out.println( fb.toString() );
-		}
+		}*/
 		
 	}
 
