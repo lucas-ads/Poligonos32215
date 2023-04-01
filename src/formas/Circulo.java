@@ -35,4 +35,9 @@ public class Circulo extends FormaBidimensional{
 	public double getPerimetro() {
 		return 2 * Math.PI * this.raio;
 	}
+
+	@Override
+	public void redimensiona(double coeficiente) {
+		this.raio = this.raio * coeficiente;
+	}
 }

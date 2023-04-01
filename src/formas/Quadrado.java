@@ -35,4 +35,9 @@ public class Quadrado extends FormaBidimensional{
 	public String toString() {
 		return super.toString() + this.getClass().getSimpleName() + ":\nLado = " + this.lado + "\n";
 	}
+
+	@Override
+	public void redimensiona(double coeficiente) {
+		this.lado = this.lado * coeficiente;
+	}
 }

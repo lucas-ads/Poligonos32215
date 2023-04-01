@@ -1,6 +1,8 @@
 package formas;
 
-public abstract class Forma {
+import interfaces.Redimensionavel;
+
+public abstract class Forma implements Redimensionavel{
 	private String color;
 
 	public Forma() {

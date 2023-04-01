@@ -4,16 +4,19 @@ package views;
 import java.util.ArrayList;
 import java.util.List;
 
+import componentes.CaixaDeTexto;
 import formas.Circulo;
 import formas.Forma;
 import formas.FormaBidimensional;
 import formas.Quadrado;
+import formas.TrianguloRetangulo;
 import interfaces.ITrianguloRetangulo;
+import interfaces.Redimensionavel;
 
 public class Programa {
 
 	public static void main(String[] args) {
-		ITrianguloRetangulo triangulo = null;
+		ITrianguloRetangulo triangulo = new TrianguloRetangulo();
 		triangulo.setBase(9);
 		triangulo.setAltura(7);
 		System.out.println("A hipotenusa é: " + triangulo.calculaHipotenusa());
@@ -21,6 +24,12 @@ public class Programa {
 		System.out.println("O perimetro é: " + triangulo.calculaPerimetro());
 		System.out.println("A base é " + triangulo.getBase() + " A altura é: " + triangulo.getAltura());
 		
+		CaixaDeTexto caixa  = new CaixaDeTexto("Hello World", 12);
+		Quadrado q1 = new Quadrado(15);
+		
+		List<Redimensionavel> lista = new ArrayList<Redimensionavel>();
+		lista.add(q1);
+		lista.add(caixa);
 		
 		
 		
